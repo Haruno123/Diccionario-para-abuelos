@@ -1,0 +1,22 @@
+meme_dict = {
+    'LOL': 'una respuesta a algo gracioso',
+    'CRINGE': 'algo raro o embarazoso',
+    'ROFL': 'una respuesta a una broma',
+    'SHEESH': 'ligera desaprobación',
+    'CREEPY': 'aterrador, siniestro',
+    'AGGRO': 'ponerse agresivo/enojado',
+}
+
+respuestas_afirmativas = ['ok', 'si']
+
+while True:
+    word = input("Escribe una palabra que no entiendas (¡con mayúsculas!): ")
+
+    if word in meme_dict:
+        print("Significado de", word + ":", meme_dict[word])
+    else:
+        print('Lo lamento, esa palabra no está en nuestro diccionario. Escribe un comentario para futuras versiones o inténtalo de nuevo.')
+        print('Presiona "ok" para reiniciar')
+        respuesta = input()
+        if respuesta.lower() not in respuestas_afirmativas:
+            break
